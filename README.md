@@ -90,7 +90,7 @@ The trained model files (`.pkl`) are not included due to size limitations.
 ## 🤝 Contributors
 
 * Tanishq Sharma
-* Team Members
+* Garima Nayar
 
 ---
 

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Turbofan Engine Dashboard</title>
+
+<style>
+
+body{
+    font-family:Arial;
+    background:#020617;
+    color:white;
+}
+
+.container{
+    width:1000px;
+    margin:auto;
+}
+
+h1{
+    text-align:center;
+}
+
+.panel{
+    background:#1e293b;
+    padding:20px;
+    margin:20px 0;
+    border-radius:8px;
+}
+
+input{
+    width:80px;
+    padding:6px;
+    margin:5px;
+}
+
+button{
+    padding:12px 20px;
+    background:#06b6d4;
+    border:none;
+    color:white;
+    font-size:16px;
+    border-radius:6px;
+}
+
+.result{
+    font-size:22px;
+    margin-top:20px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container turbofan-dashboard">
+
+<h1>TURBOFAN ENGINE HEALTH MONITORING SYSTEM</h1>
+
+<form action="/predict" method="POST">
+
+<!-- ENGINE INFO -->
+
+<div class="grid-row">
+
+<div class="panel">
+
+<h3>Engine Information</h3>
+
+<label>Engine ID</label>
+<input type="text">
+
+<label>Operating Cycle</label>
+<input type="text">
+
+</div>
+
+
+<div class="panel">
+
+<h3>Operational Settings</h3>
+
+<label>Setting 1</label>
+<input name="f1">
+
+<label>Setting 2</label>
+<input name="f2">
+
+<label>Setting 3</label>
+<input name="f3">
+
+</div>
+
+</div>
+
+
+<!-- SENSOR PANELS -->
+
+<div class="grid-row">
+
+<div class="panel">
+
+<h3>Temperature Sensors</h3>
+
+<label>Fan Inlet Temp</label>
+<input name="f4">
+
+<label>LPC Outlet Temp</label>
+<input name="f5">
+
+<label>HPC Outlet Temp</label>
+<input name="f6">
+
+<label>LPT Outlet Temp</label>
+<input name="f7">
+
+</div>
+
+
+<div class="panel">
+
+<h3>Pressure Sensors</h3>
+
+<label>Fan Inlet Pressure</label>
+<input name="f8">
+
+<label>HPC Pressure</label>
+<input name="f9">
+
+<label>Static Pressure</label>
+<input name="f10">
+
+<label>Bypass Pressure</label>
+<input name="f11">
+
+</div>
+
+
+<div class="panel">
+
+<h3>Performance Sensors</h3>
+
+<label>Fan Speed</label>
+<input name="f12">
+
+<label>Core Speed</label>
+<input name="f13">
+
+<label>Fuel Flow</label>
+<input name="f14">
+
+<label>Engine Efficiency</label>
+<input name="f15">
+
+</div>
+
+</div>
+
+
+<!-- EXTRA SENSORS -->
+
+<div class="panel">
+
+<h3>Additional Sensors</h3>
+
+<input name="f16">
+<input name="f17">
+<input name="f18">
+<input name="f19">
+<input name="f20">
+<input name="f21">
+<input name="f22">
+<input name="f23">
+<input name="f24">
+
+</div>
+
+
+<div style="text-align:center;margin-top:30px">
+
+<button type="submit">Predict Remaining Useful Life</button>
+
+</div>
+
+</form>
+
+
+{% if prediction %}
+
+<div class="panel result">
+
+Predicted Remaining Useful Life:
+<strong>{{prediction}} Cycles</strong>
+
+</div>
+
+{% endif %}
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Aircraft Engine Predictive Maintenance</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="header">
+
+<h1>Aircraft Engine Predictive Maintenance System</h1>
+
+</div>
+
+
+<div class="hero">
+
+<img src="{{ url_for('static', filename='images/engine.png') }}">
+
+<img src="{{ url_for('static', filename='images/dashboard.png') }}">
+
+</div>
+
+
+<div class="intro">
+
+<h2>Welcome to the Aircraft Engine Predictive Maintenance System</h2>
+
+<p>
+This system predicts the remaining useful life of turbofan engines using
+advanced predictive analytics powered by machine learning trained on the
+NASA Turbofan Engine Degradation Simulation dataset (C-MAPSS).
+</p>
+
+</div>
+
+
+<div class="cards">
+
+<div class="card">
+
+<h3>Project Overview</h3>
+
+<p>
+Learn about the objectives and benefits of predictive maintenance
+using aircraft engines.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>How It Works</h3>
+
+<p>
+1. Collect real-time engine sensor data<br>
+2. Input data into monitoring system<br>
+3. Machine learning evaluates data<br>
+4. RUL is predicted<br>
+5. Maintenance decisions are made
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>Select Machine Type</h3>
+
+<img src="{{ url_for('static', filename='images/engine.png') }}">
+
+<p>Turbofan Engine Monitoring</p>
+
+<a href="/turbofan">
+<button>Start Monitoring</button>
+</a>
+
+</div>
+
+</div>
+
+</body>
+</html>

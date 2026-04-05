@@ -2,7 +2,7 @@
 <html>
 <head>
 
-<title>Aircraft Engine Predictive Maintenance</title>
+<title>Industrial Motor Predictive Maintenance</title>
 
 <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 
@@ -12,73 +12,70 @@
 
 <div class="header">
 
-<h1>Aircraft Engine Predictive Maintenance System</h1>
+<h1>Industrial Motor Predictive Maintenance System</h1>
+<p>AI-Powered Machine Health Monitoring</p>
 
 </div>
 
 
 <div class="hero">
 
-<img src="{{ url_for('static', filename='images/engine.png') }}">
+<img src="{{ url_for('static', filename='images/motor_main.png') }}">
 
-<img src="{{ url_for('static', filename='images/dashboard.png') }}">
+<div class="hero-text">
 
-</div>
-
-
-<div class="intro">
-
-<h2>Welcome to the Aircraft Engine Predictive Maintenance System</h2>
+<h2>Smart Maintenance for Industrial Motors</h2>
 
 <p>
-This system predicts the remaining useful life of turbofan engines using
-advanced predictive analytics powered by machine learning trained on the
-NASA Turbofan Engine Degradation Simulation dataset (C-MAPSS).
+This intelligent monitoring platform predicts machine failure before it happens.
+Using Machine Learning, the system analyzes electrical, vibration, thermal and
+performance sensor data to estimate the Remaining Useful Life of industrial motors.
 </p>
-
-</div>
-
-
-<div class="cards">
-
-<div class="card">
-
-<h3>Project Overview</h3>
-
-<p>
-Learn about the objectives and benefits of predictive maintenance
-using aircraft engines.
-</p>
-
-</div>
-
-
-<div class="card">
-
-<h3>How It Works</h3>
-
-<p>
-1. Collect real-time engine sensor data<br>
-2. Input data into monitoring system<br>
-3. Machine learning evaluates data<br>
-4. RUL is predicted<br>
-5. Maintenance decisions are made
-</p>
-
-</div>
-
-
-<div class="card">
-
-<h3>Select Machine Type</h3>
-
-<img src="{{ url_for('static', filename='images/engine.png') }}">
-
-<p>Turbofan Engine Monitoring</p>
 
 <a href="/turbofan">
-<button>Start Monitoring</button>
+<button class="main-btn">Open Monitoring Dashboard</button>
 </a>
+
+</div>
+
+</div>
+
+
+
+<div class="features">
+
+<div class="feature-card">
+
+<h3>AI Prediction</h3>
+
+<p>
+Machine learning predicts motor life using historical degradation patterns
+and real-time sensor inputs.
+</p>
+
+</div>
+
+
+<div class="feature-card">
+
+<h3>Health Monitoring</h3>
+
+<p>
+Track machine condition using vibration, temperature,
+electrical load and operational parameters.
+</p>
+
+</div>
+
+
+<div class="feature-card">
+
+<h3>Preventive Maintenance</h3>
+
+<p>
+Prevent unexpected machine failures and reduce
+industrial downtime with predictive analytics.
+</p>
 
 </div>
 

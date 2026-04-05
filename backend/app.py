@@ -1,13 +1,18 @@
-from flask import Flask, request, jsonify, render_template
-from flask import Flask, request, jsonify
+from flask import Flask, request, render_template
 import joblib
 import numpy as np
-
-# Load model and scaler
-model = joblib.load("../model/rul_model.pkl")
-scaler = joblib.load("../model/scaler.pkl")
+import os
 
 app = Flask(__name__)
+
+# Correct path to model folder
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_PATH = os.path.join(BASE_DIR, "..", "model", "rul_model.pkl")
+SCALER_PATH = os.path.join(BASE_DIR, "..", "model", "scaler.pkl")
+
+# Load model and scaler
+model = joblib.load(MODEL_PATH)
+scaler = joblib.load(SCALER_PATH)
 
 @app.route("/")
 def home():
@@ -22,7 +27,7 @@ def predict():
 
     features = []
 
-    for i in range(1,25):
+    for i in range(1, 25):
         value = float(request.form[f"f{i}"])
         features.append(value)
 
@@ -30,7 +35,7 @@ def predict():
     prediction = model.predict(scaled_data)[0]
 
     health = "Healthy"
-    suggestion = "Engine operating normally."
+    suggestion = "Motor operating normally."
 
     if prediction < 60:
         health = "Critical"
@@ -42,10 +47,10 @@ def predict():
 
     return render_template(
         "turbofan.html",
-        prediction=round(float(prediction),2),
+        prediction=round(float(prediction), 2),
         health=health,
         suggestion=suggestion
     )
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False)

@@ -1,99 +1,50 @@
-# 🚀 AI-KAVACH: Predictive Maintenance System
+# AI-KAVACH
 
-## 📌 Overview
+AI-based Predictive Maintenance System for detecting machine failures.
 
-AI-KAVACH is a machine learning-based predictive maintenance system designed to estimate the Remaining Useful Life (RUL) of machinery. It helps in reducing downtime, preventing failures, and optimizing maintenance schedules.
+## Features
 
----
+* Machine failure prediction
+* Dashboard interface
+* Maintenance alerts
 
-## 🎯 Features
+## Tech Stack
 
-* Predicts equipment failure in advance
-* Estimates Remaining Useful Life (RUL)
-* User-friendly interface
-* Scalable backend architecture
-* Data-driven decision making
+* Python
+* Flask
+* Scikit-learn
+* Pandas
+* HTML
+* CSS
 
----
+## Installation
 
-## 🛠️ Tech Stack
-
-* **Frontend:** HTML, CSS, JavaScript
-* **Backend:** Python (Flask/FastAPI)
-* **Machine Learning:** Scikit-learn, Pandas, NumPy
-* **Tools:** VS Code, Git
-
----
-
-## 📂 Project Structure
-
-```
-AI-KAVACH/
-│── backend/           # Backend logic
-│── frontend/          # UI components
-│── model/             # ML models (excluded from repo)
-│── data/              # Dataset files
-│── notebooks/         # Jupyter notebooks
-│── reports/           # Documentation
-│── app.py             # Main application
-│── .gitignore
-```
-
----
-
-## ⚙️ Installation & Setup
-
-### 1. Clone the Repository
-
-```
 git clone https://github.com/tsharma21933/AI-KAVACH.git
+
 cd AI-KAVACH
-```
 
-### 2. Create Virtual Environment
-
-```
-python -m venv venv
-venv\Scripts\activate
-```
-
-### 3. Install Dependencies
-
-```
 pip install -r requirements.txt
-```
 
-### 4. Run the Application
-
-```
 python app.py
-```
 
----
+## Dataset
 
-## 📊 Model Information
+Predictive Maintenance Dataset
 
-The trained model files (`.pkl`) are not included due to size limitations.
+## Model
 
- 
+Random Forest Classifier
 
----
+## Accuracy
 
-## 📈 Use Case
+92%
 
-* Manufacturing industries
-* Equipment health monitoring
-* Predictive analytics
+## Screenshots
 
----
+(Add screenshots here)
 
-## 🤝 Contributors
+## Future Improvements
 
-* Tanishq Sharma
-* Garima Nayar
-
----
-
-## 📄 License
-
-This project is for educational purposes.
+* Real-time prediction API
+* Deployment
+* Advanced dashboard

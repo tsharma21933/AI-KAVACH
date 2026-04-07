@@ -68,3 +68,5 @@ def predict():
         health=health,
         suggestion=suggestion
     )
+if __name__ == "__main__":
+    app.run(debug=True)
